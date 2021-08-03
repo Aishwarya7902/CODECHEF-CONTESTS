@@ -1,0 +1,50 @@
+problem link:  https://www.codechef.com/LTIME98C/problems/REDALERT
+///////////////////////////////////////////////////////////////////////    time complexity:O(n)      /////////////////////////////////////////////////
+#include<bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    bool flag=false;
+	    int ans=0;
+	    int n,d,h;
+	    cin>>n>>d>>h;
+	    int a[n];
+	    
+	    for(int i=0;i<n;i++){
+	        cin>>a[i];
+	    }
+	   
+	    for(int i=0;i<n;i++){
+	        if(a[i]>0){
+	            ans+=a[i];
+	        }
+	        
+	        else{
+	            if(ans<d){
+	                ans=0;
+	            }
+	            else{
+	                ans-=d;
+	            }
+	        }
+	        if(ans>h){
+	            flag=true;
+	            break;
+	        }
+	        
+	    }
+	   
+	    if(flag==true){
+	        cout<<"YES"<<endl;
+	    }
+	    else{
+      cout<<"NO"<<endl;
+	    }
+	}
+	return 0;
+}
