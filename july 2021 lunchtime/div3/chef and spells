@@ -1,0 +1,48 @@
+problem:https://www.codechef.com/LTIME98C/problems/CHFSPL
+my soln:GETTING TLE AS TIME COMPLEXITY IS O(NLOGN) TO SORT ARRAY 
+  
+  #include<bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    vector<int>v;
+	    int a;
+	    for(int i=0;i<3;i++){
+	        cin>>a;
+	        v.push_back(a);
+	    }
+	    sort(v.begin(),v.end(),greater<int>());
+	    cout<<v[0]+v[1]<<endl;
+	    
+	}
+	return 0;
+}
+
+
+/////////////////////////OPTIMAL SOLN//////////////////////////////////////////////////
+O(n) time
+#include<bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	   int a,b,c;
+	   cin>>a>>b>>c;
+	   cout<<a+b+c-min(a,min(b,c))<<endl;
+	}
+	return 0;
+}
+
+
+  
