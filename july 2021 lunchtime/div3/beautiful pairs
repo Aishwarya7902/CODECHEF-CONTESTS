@@ -36,4 +36,34 @@ int main() {
 }
 ************************************************THE OPTIMAL AND BEST ANSWER***********************************************************
 TIME:O(N)
+space:O(N)
+#include<bits/stdc++.h> 
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	int t;
+	cin>>t;
+	while(t--){
+	    long long  n;
+	    cin>>n;
+	    long long x;
+	    map<long long,long long>fre;
+	    for(long long  i=0;i<n;i++){
+	        cin>>x;
+	        fre[x]++;
+	        
+	    }
+	    long long ans=0;
+	    for(auto it:fre){
+	        ans+=((n-it.second)*it.second);
+	    }
+	    cout<<ans<<endl;
+	}
+	return 0;
+}
+
 
