@@ -1,0 +1,23 @@
+problem:https://www.codechef.com/COOK138D/problems/CREDITS
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int x;
+	    cin>>x;
+	    if(x<35){
+	        cout<<"UNDERLOAD"<<endl;
+	    }
+	   else if(x>65){
+	        cout<<"OVERLOAD"<<endl;
+	    }
+	    else{
+	        cout<<"NORMAL"<<endl;
+	    }
+	}
+	return 0;
+}
