@@ -1,0 +1,26 @@
+PROBLEM:https://www.codechef.com/START27D/problems/BLACKJACK
+//BRUTE FORCE
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int a,b;
+	    cin>>a>>b;
+	    bool flag=false;
+	    for(int i=1;i<=10;i++){
+	        if((a+b+i)%21==0){
+	            flag=true;
+	            cout<<i<<endl;
+	            break;
+	        }
+	    }
+	    if(flag==false){
+	        cout<<-1<<endl;
+	    }
+	}
+	return 0;
+}
