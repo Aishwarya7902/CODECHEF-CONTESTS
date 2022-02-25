@@ -1,1 +1,17 @@
 PROBLEM:https://www.codechef.com/START27D/problems/PRODUCT
+//BEST SOLUTION IS GIVEN IN CODECHEF VIDEO EDITORIALS
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int b,c;
+	    cin>>b>>c;
+	    int ans=__gcd(b,c);
+	    cout<<c/ans<<endl;
+	}
+	return 0;
+}
