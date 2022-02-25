@@ -30,3 +30,27 @@ int main() {
 	}
 	return 0;
 }
+
+// A BETTER APPROACH
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	//PSEUDO CODE 
+	//1.find total sum of three numbers
+	//2.from total subtract the least
+	
+	
+	int t;
+	cin>>t;
+	while(t--){
+	    int a,b,c;
+	    cin>>a>>b>>c;
+	    int total=a+b+c;
+	    total-=min(a,min(b,c));
+	    cout<<total<<endl;
+	}
+	return 0;
+}
+
