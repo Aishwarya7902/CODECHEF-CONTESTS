@@ -1,0 +1,32 @@
+PROBLEM:https://www.codechef.com/START27D/problems/SALE
+//BRUTE FORCE
+//tc:O(nlogn) for_sorting
+//sc:O(n) for_extra vector
+/*PSEUDO CODE
+1.STORE ALL THE 3 PRICES IN A VECTOR
+2.SORT VECTOR
+3.SINCE LOWEST PRICED ITEM WILL BE GIVEN FREE HENCE WE WILL HAVE TO BUY TWO ITEMS EXCEPT THE LOWEST COST ITEM
+4.RETURN THE PRICE OF TWO HIGHER PRICED ITEMS
+*/
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    vector<int>v;
+	    for(int i=0;i<3;i++){
+	        int a;
+	        cin>>a;
+	        v.push_back(a);
+	    }
+	    sort(v.begin(),v.end());
+	    cout<<v[1]+v[2]<<endl;
+	    
+	}
+	return 0;
+}
