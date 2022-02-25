@@ -53,4 +53,25 @@ int main() {
 	}
 	return 0;
 }
+//  A SMARTER WAY
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	//PSEUDO CODE 
+	//1.WE KNOW THAT ANS WILL BE THE SUMMATION OF MAXIMUM TWO NUMBERS OUT OF GIVEN THREE SINCE MIN ITEM WILL BE FREE
+	//2. HENCE ANS WILL BE MAX(a+b,b+c,a+c)
+	
+	
+	int t;
+	cin>>t;
+	while(t--){
+	    int a,b,c;
+	    cin>>a>>b>>c;
+	   
+	    cout<<max(a+b,max(a+c,b+c))<<endl;
+	}
+	return 0;
+}
 
