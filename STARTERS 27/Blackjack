@@ -1,5 +1,5 @@
 PROBLEM:https://www.codechef.com/START27D/problems/BLACKJACK
-//BRUTE FORCE
+
 #include <iostream>
 using namespace std;
 
@@ -10,17 +10,14 @@ int main() {
 	while(t--){
 	    int a,b;
 	    cin>>a>>b;
-	    bool flag=false;
-	    for(int i=1;i<=10;i++){
-	        if((a+b+i)%21==0){
-	            flag=true;
-	            cout<<i<<endl;
-	            break;
-	        }
+	    int third_no=21-a-b;
+	    if(1<=third_no && third_no<=10){
+	        cout<<third_no<<endl;
 	    }
-	    if(flag==false){
+	    else{
 	        cout<<-1<<endl;
 	    }
 	}
 	return 0;
 }
+
