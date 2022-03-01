@@ -1,0 +1,31 @@
+problem:https://www.codechef.com/problems/BINSTRING
+BEST SOLUTION AND EXPLAINATION:https://youtu.be/pLl1vez5ml4
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    string str;
+	    cin>>str;
+	    //calculate groups
+	    int grp=0;
+	    char curr='*';
+	    for(auto x:str){
+	        
+	         if(x!=curr){
+	            curr=x;
+	            grp++;
+	        }
+	    }
+	    cout<<grp<<endl;
+	    
+	}
+	return 0;
+}
